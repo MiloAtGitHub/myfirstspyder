@@ -20,7 +20,7 @@ strhtml = requests.get(url)
 soup = BeautifulSoup(strhtml.text, 'lxml')
 # data1 = soup.select('')
 # data = soup.select('#ul.dt_con1>li>a')
-data = soup.find(text='<a')
+data = soup.find(text='a>')
 
 print(data)
 
