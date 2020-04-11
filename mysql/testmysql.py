@@ -32,6 +32,8 @@ def connect_mysql(host, database, user, password, table):
             print(table_list)
         query = "select * from %s" % table
         cursor.execute(query)
+        desc = cursor.description
+        print(desc)
         curs = cursor.fetchall()
         cursor.close()
         cnx.close()
